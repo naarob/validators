@@ -39,7 +39,7 @@ dependencies = []
 
 [project.urls]
 Homepage = "https://python-validators.github.io/validators"
-Documentation = "https://yozachar.github.io/pyvalidators"
+Documentation = "https://nandgator.github.io/pyvalidators"
 Repository = "https://github.com/python-validators/validators"
 Changelog = "https://github.com/python-validators/validators/blob/master/CHANGES.md"
 

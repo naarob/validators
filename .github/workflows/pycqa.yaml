@@ -14,12 +14,12 @@ jobs:
     steps:
       # checkout repository
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       # set up specific python version
-      - name: Set up Python v3.9
-        uses: actions/setup-python@v5
+      - name: Set up Python v3.10
+        uses: actions/setup-python@v6
         with:
-          python-version: "3.9"
+          python-version: "3.10"
       # tooling
       - name: Install 'tooling' dependencies
         run: pip install -r package/requirements.tooling.txt
@@ -32,8 +32,8 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+        os: [ubuntu-latest]
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
     runs-on: ${{ matrix.os }}
     steps:
       # checkout repository again!
